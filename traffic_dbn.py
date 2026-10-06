@@ -66,8 +66,8 @@ class GlobalParams:
 class CouplingParams:
     #How the global state and the neighbours push on each car.
 
-    #macro: a car is pulled toward the average speed of thraffic.
-    gain_macro: float = 0.15 #[1/s]
+    #macro: a car is pulled toward the average speed of traffic.
+    gain_macro: float = 0.15 # pull toward mean speed[1/s]
 
     #The weight W_ij: how much does car j influence car i.
     range_m: float = 40.0 #[m]how far ahead a car still matters   
@@ -160,7 +160,7 @@ def is_acyclic(edges):
 #so with 3 cars: 4 + 3*11 = 37 numbers in the vector z
 
 class TrafficDBN:
-    #Joint model of the global traffic states G and N VEHICALES 
+    #Joint model of the global traffic states G and N VEHICLES 
 
     def __init__ (self,vehicles,glob=None, coupling=None):
         #vehicles: list of VehicleSSM objects, one for each car
@@ -313,4 +313,4 @@ def macro_summary(self, X):
         """
         target = self.macro_summary(X)                  # what the cars say now
         return G + (self.dt / self.glob.tau) * (target - G)
- 
+ #hi bro nice to meeet u have a nice day  aly +80 love 
